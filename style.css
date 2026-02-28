@@ -1,3 +1,4 @@
+/* Reset básico */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -12,21 +13,23 @@ header {
   color: white;
 }
 
+/* Container de cards */
 .cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
+  gap: 12px;
 }
 
+/* Card */
 .card {
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 15px;
-  margin: 12px;
+  width: 220px;
   text-align: center;
-  width: 220px; 
   transition: transform 0.3s;
 }
 
@@ -34,13 +37,15 @@ header {
   transform: translateY(-5px);
 }
 
+/* Imagem do card */
 .card-img {
   width: 100%;
-  height: 160px; 
+  height: 160px; /* tamanho proporcional do card */
   object-fit: cover;
   border-radius: 10px;
 }
 
+/* Título e descrição */
 .card h3 {
   margin: 10px 0 6px 0;
   font-size: 18px;
@@ -53,13 +58,15 @@ header {
   margin-bottom: 6px;
 }
 
+/* Preço */
 .price {
   font-size: 16px;
   font-weight: bold;
-  color: #ff4d4d; 
+  color: #ff4d4d; /* vermelho chamativo */
   margin-bottom: 10px;
 }
 
+/* Botão */
 .btn {
   display: inline-block;
   padding: 12px 0;
@@ -76,4 +83,10 @@ header {
 .btn:hover {
   background: #c92f2f;
   transform: scale(1.05);
+}
+
+/* Preço do Reembolso Ifood em destaque */
+.card:nth-child(6) .price {
+  color: #ff6b6b; /* vermelho mais chamativo */
+  font-size: 18px;
 }
